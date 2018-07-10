@@ -1,3 +1,5 @@
+// swift-tools-version:4.1
+
 //
 //  Package.swift
 //  RandomKit
@@ -29,14 +31,14 @@ import PackageDescription
 
 let package = Package(
     name: "RandomKit",
-    targets: [
-        Target(name: "RandomKit"),
-        Target(name: "benchmark",
-               dependencies: ["RandomKit"])
-    ],
     dependencies: [
-        .Package(url: "https://github.com/nvzqz/Threadly.git",
-                 majorVersion: 1)
+        .package(url: "https://github.com/nvzqz/Threadly.git",
+                 from: "1.0.0")
+    ],
+    targets: [
+        .target(name: "RandomKit"),
+        .target(name: "benchmark",
+                dependencies: ["RandomKit"])
     ]
 )
 
