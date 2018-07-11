@@ -31,12 +31,18 @@ import PackageDescription
 
 let package = Package(
     name: "RandomKit",
+    products: [
+        .library(
+            name: "RandomKit",
+            targets: ["RandomKit"]),
+    ],
     dependencies: [
         .package(url: "https://github.com/nvzqz/Threadly.git",
                  from: "1.0.0")
     ],
     targets: [
-        .target(name: "RandomKit"),
+        .target(name: "RandomKit",
+                dependencies: ["Threadly"]),
         .target(name: "benchmark",
                 dependencies: ["RandomKit"])
     ]
