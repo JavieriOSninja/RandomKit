@@ -52,14 +52,20 @@ public protocol RandomRetrievableInRange: RandomRetrievable {
 
 extension RandomRetrievableInRange where Index: Strideable, Index.Stride: SignedInteger {
 
+#if swift(>=4.2)
+#else
     /// Returns a random element in `range` without checking whether `self` or `range` is empty.
     public func uncheckedRandom<R: RandomGenerator>(in range: CountableRange<Index>, using randomGenerator: inout R) -> Iterator.Element {
         return uncheckedRandom(in: Range(range), using: &randomGenerator)
     }
+#endif
 
+#if swift(>=4.2)
+#else
     /// Returns an optional random element in `range`. The result is `nil` if `self` or `range` is empty.
     public func random<R: RandomGenerator>(in range: CountableRange<Index>, using randomGenerator: inout R) -> Iterator.Element? {
         return random(in: Range(range), using: &randomGenerator)
     }
+#endif
 
 }

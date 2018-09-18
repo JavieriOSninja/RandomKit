@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "528200AB1BC9C4C0001FDD58"
+               BlueprintIdentifier = "RandomKit::benchmark"
+               BuildableName = "benchmark"
+               BlueprintName = "benchmark"
+               ReferencedContainer = "container:RandomKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "RandomKit::RandomKit"
                BuildableName = "RandomKit.framework"
-               BlueprintName = "RandomKit watchOS"
+               BlueprintName = "RandomKit"
                ReferencedContainer = "container:RandomKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,20 +43,11 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "528200AB1BC9C4C0001FDD58"
-            BuildableName = "RandomKit.framework"
-            BlueprintName = "RandomKit watchOS"
-            ReferencedContainer = "container:RandomKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -54,9 +59,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "528200AB1BC9C4C0001FDD58"
-            BuildableName = "RandomKit.framework"
-            BlueprintName = "RandomKit watchOS"
+            BlueprintIdentifier = "RandomKit::benchmark"
+            BuildableName = "benchmark"
+            BlueprintName = "benchmark"
             ReferencedContainer = "container:RandomKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -69,15 +74,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "528200AB1BC9C4C0001FDD58"
-            BuildableName = "RandomKit.framework"
-            BlueprintName = "RandomKit watchOS"
-            ReferencedContainer = "container:RandomKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

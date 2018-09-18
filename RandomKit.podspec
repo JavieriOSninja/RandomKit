@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name                      = "RandomKit"
-    s.version                   = "6.0.6"
-    s.swift_version             = "4.1"
+    s.version                   = "6.1.0"
+    s.swift_version             = "4.2"
     s.summary                   = "Random data generation in Swift."
     s.homepage                  = "https://github.com/nvzqz/#{s.name}"
     s.documentation_url         = "https://nvzqz.github.io/#{s.name}/docs/index.html"

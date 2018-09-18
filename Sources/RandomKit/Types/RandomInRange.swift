@@ -49,6 +49,8 @@ extension RandomInRange {
 
 extension RandomInRange where Self: Strideable & Comparable, Self.Stride : SignedInteger {
 
+#if swift(>=4.2)
+#else
     /// Returns an optional random value of `Self` inside of the range using `randomGenerator`.
     public static func random<R: RandomGenerator>(in range: CountableRange<Self>, using randomGenerator: inout R) -> Self? {
         return random(in: Range(range), using: &randomGenerator)
@@ -58,6 +60,7 @@ extension RandomInRange where Self: Strideable & Comparable, Self.Stride : Signe
     public static func uncheckedRandom<R: RandomGenerator>(in range: CountableRange<Self>, using randomGenerator: inout R) -> Self {
         return uncheckedRandom(in: Range(range), using: &randomGenerator)
     }
+#endif
 
 }
 

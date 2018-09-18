@@ -1,4 +1,4 @@
-// swift-tools-version:4.1
+// swift-tools-version:4.2
 
 //
 //  Package.swift
@@ -44,12 +44,14 @@ let package = Package(
         .target(name: "RandomKit",
                 dependencies: ["Threadly"]),
         .target(name: "benchmark",
-                dependencies: ["RandomKit"])
+                dependencies: ["RandomKit"]),
+        .testTarget(name: "RandomKitTests",
+                    dependencies: ["RandomKit"]),
     ]
 )
 
 #if swift(>=3.1)
-    package.swiftLanguageVersions = [3, 4]
+    package.swiftLanguageVersions = [.v4, .v4_2]
 #endif
 
 #if !swift(>=3.2)
