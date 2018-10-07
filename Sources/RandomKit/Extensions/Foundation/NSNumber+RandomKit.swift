@@ -33,7 +33,7 @@ extension NSNumber: Random {
     ///
     /// - returns: Random value in `0...100`.
     public class func random<R: RandomGenerator>(using randomGenerator: inout R) -> Self {
-        return .init(value: UInt.random(through: 100, using: &randomGenerator))
+        return unsafeDowncast(NSNumber.init(value: UInt.random(through: 100, using: &randomGenerator)), to: self)
     }
 
     /// Generates a random integer in the closed range.
@@ -41,7 +41,7 @@ extension NSNumber: Random {
     /// - parameter closedRange: The range in which the integer will be generated.
     /// - parameter randomGenerator: The random generator to use.
     public class func random<R: RandomGenerator>(in closedRange: ClosedRange<Int>, using randomGenerator: inout R) -> Self {
-        return .init(value: .random(in: closedRange, using: &randomGenerator))
+        return unsafeDowncast(NSNumber.init(value: .random(in: closedRange, using: &randomGenerator)), to: self)
     }
 
     /// Generates a random double in the closed range.
@@ -49,7 +49,7 @@ extension NSNumber: Random {
     /// - parameter closedRange: The range in which the double will be generated.
     /// - parameter randomGenerator: The random generator to use.
     public class func random<R: RandomGenerator>(in closedRange: ClosedRange<Double>, using randomGenerator: inout R) -> Self {
-        return .init(value: .random(in: closedRange, using: &randomGenerator))
+        return unsafeDowncast(NSNumber.init(value: .random(in: closedRange, using: &randomGenerator)), to: self)
     }
 
 }
