@@ -96,7 +96,7 @@ private func _load<T>(symbol: String) -> T? {
     return unsafeBitCast(result, to: T.self)
 }
 
-private typealias _Arc4random_buf = @convention(c) (ImplicitlyUnwrappedOptional<UnsafeMutableRawPointer>, Int) -> ()
+private typealias _Arc4random_buf = @convention(c) (Optional<UnsafeMutableRawPointer>, Int) -> ()
 
 private typealias _Arc4random = @convention(c) () -> UInt32
 
